@@ -1,0 +1,12 @@
+[2025-07-22 13:50:20] 🔧 Starting ReviewRadar CI/CD Pipeline
+
+[2025-07-22 13:50:20] 
+🚀 🔁 Reset & Load Businesses Only
+[2025-07-22 13:50:20] → Running: python data_pipeline/scraper_businesses.py
+[2025-07-22 13:50:39] ✅ Success: 🔁 Reset & Load Businesses Only
+[2025-07-22 13:50:39] 
+🚀 🧱 Apply User Schema Enhancements
+[2025-07-22 13:50:39] → Running: python data_pipeline/run_schema.py
+[2025-07-22 13:50:39] ❌ Failed: 🧱 Apply User Schema Enhancements (exit code 1)
+[2025-07-22 13:50:39] 🛑 Pipeline stopped due to error.
+

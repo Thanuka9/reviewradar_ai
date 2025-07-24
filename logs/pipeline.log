@@ -1,0 +1,24 @@
+[2025-07-24 16:45:21] 🔧 Starting ReviewRadar CI/CD Pipeline
+
+[2025-07-24 16:45:21] 
+🚀 🔁 Reset & Load Raw Tables
+[2025-07-24 16:45:21] → Running: python data_pipeline/scraper.py
+[2025-07-24 17:05:30] ✅ Success: 🔁 Reset & Load Raw Tables
+[2025-07-24 17:05:30] 
+🚀 🧱 Apply DB Migrations & Schema Enhancements
+[2025-07-24 17:05:30] → Running: python data_pipeline/run_schema.py
+[2025-07-24 17:05:30] ✅ Success: 🧱 Apply DB Migrations & Schema Enhancements
+[2025-07-24 17:05:30] 
+🚀 📥 Reload Users & Reviews with Extended Fields
+[2025-07-24 17:05:30] → Running: python data_pipeline/scraper_users_reviews.py
+[2025-07-24 17:26:30] ✅ Success: 📥 Reload Users & Reviews with Extended Fields
+[2025-07-24 17:26:30] 
+🚀 🗺️  Map Business Categories & Geo
+[2025-07-24 17:26:30] → Running: python data_pipeline/map_businesses.py
+[2025-07-24 17:26:38] ✅ Success: 🗺️  Map Business Categories & Geo
+[2025-07-24 17:26:38] 
+🚀 🧠 Generate Features & Save Outputs
+[2025-07-24 17:26:38] → Running: python data_pipeline/features.py
+[2025-07-25 00:45:59] ✅ Success: 🧠 Generate Features & Save Outputs
+[2025-07-25 00:45:59] 
+🎉 Pipeline completed successfully!
