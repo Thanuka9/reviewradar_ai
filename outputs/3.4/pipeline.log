@@ -1,0 +1,11 @@
+2025-08-04 18:28:50,663 INFO: Using up to 16 CPU cores
+2025-08-04 18:28:50,716 INFO: [GPU] 0:NVIDIA GeForce RTX 4050 Laptop GPU util=0% mem=133/6141MiB
+2025-08-04 18:28:50,716 INFO: Loading final features from outputs\preprocessed.npz
+2025-08-04 18:28:56,865 INFO: Preprocessed features ready: (6988708, 109)
+2025-08-04 18:28:59,982 INFO: Split -> train: 5590966  test: 1397742
+2025-08-04 18:28:59,982 INFO: Running RandomizedSearchCV with 10 draws on full data
+2025-08-04 18:38:17,062 INFO: Best params: {'clf__estimator__C': 1}
+2025-08-04 18:38:17,149 INFO: Saved CV results & best params
+2025-08-04 18:38:17,151 INFO: Saved model to outputs\20250804_182850\models\sentiment_pipeline_v3.4.pkl
+2025-08-04 18:38:22,091 INFO: Saved classification report
+2025-08-04 18:38:22,093 INFO: Total runtime: 571.4s

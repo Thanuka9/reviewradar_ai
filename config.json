@@ -1,0 +1,49 @@
+{
+  "db_user": "review_user",
+  "db_pass": "root",
+  "db_host": "localhost",
+  "db_port": "5432",
+  "db_name": "reviews",
+  "data_query": "SELECT r.text, rf.stars, rf.sentiment, rf.text_length, rf.kw_delivery, rf.kw_service, rf.kw_price, rf.user_avg_3m, rf.user_avg_6m, rf.user_avg_12m FROM review_features rf JOIN reviews r USING(review_id)",
+  "pos_threshold": 4,
+  "spacy_model": "en_core_web_sm",
+  "tfidf": {
+    "max_df": 0.9,
+    "max_features": 20000,
+    "ngram_range": [1, 2],
+    "n_components": 100
+  },
+  "numeric_features": [
+    "sentiment",
+    "text_length",
+    "kw_delivery",
+    "kw_service",
+    "kw_price",
+    "user_avg_3m",
+    "user_avg_6m",
+    "user_avg_12m"
+  ],
+  "model": {
+    "max_iter": 500
+  },
+  "search": {
+    "cv": 3,
+    "n_iter": 100,
+    "sample_size": 2000000,
+    "param_dist": {
+      "clf__estimator__C": {
+        "distribution": "loguniform",
+        "low": 1e-3,
+        "high": 1e3
+      },
+      "clf__estimator__penalty": ["l1", "l2"],
+      "clf__estimator__solver": ["saga"],
+      "clf__estimator__class_weight": [null, "balanced"]
+    },
+    "scoring": "f1"
+  },
+  "chunk_size": 50000,
+  "test_size": 0.2,
+  "jobs": 16,
+  "output_base": "outputs"
+}
