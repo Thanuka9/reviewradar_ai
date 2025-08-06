@@ -1,0 +1,9 @@
+{
+  "best_params": {
+    "clf__estimator__C": 0.003395900933162751,
+    "clf__estimator__class_weight": null,
+    "clf__estimator__penalty": "l2",
+    "clf__estimator__solver": "saga"
+  },
+  "best_score": 0.9464219906849852
+}

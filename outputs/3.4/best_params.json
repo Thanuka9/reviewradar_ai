@@ -1,0 +1,6 @@
+{
+  "best_params": {
+    "clf__estimator__C": 1
+  },
+  "best_score": 0.9463606314012211
+}

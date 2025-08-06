@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>Model Comparison Dashboard</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Model Performance Dashboard</h1>
+<h2>Metrics Table</h2>
+<table border="1" class="dataframe table table-striped">
+  <thead>
+    <tr style="text-align: right;">
+      <th>model</th>
+      <th>accuracy</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1</th>
+      <th>roc_auc</th>
+      <th>avg_proba</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>enhanced_sentiment_ensemble_v4</td>
+      <td>0.910595</td>
+      <td>0.923472</td>
+      <td>0.944891</td>
+      <td>0.934059</td>
+      <td>0.968686</td>
+      <td>0.648153</td>
+    </tr>
+    <tr>
+      <td>sentiment_pipeline_v3.4</td>
+      <td>0.841601</td>
+      <td>0.865287</td>
+      <td>0.904440</td>
+      <td>0.884431</td>
+      <td>0.888617</td>
+      <td>0.676831</td>
+    </tr>
+    <tr>
+      <td>sentiment_pipeline_v3.5</td>
+      <td>0.841280</td>
+      <td>0.865215</td>
+      <td>0.903976</td>
+      <td>0.884171</td>
+      <td>0.888329</td>
+      <td>0.676553</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Visualizations</h2>
+<h3>calibration_curves</h3><img src="calibration_curves.png" style="max-width:100%;"><br>
+<h3>confusion_enhanced_sentiment_ensemble_v4</h3><img src="confusion_enhanced_sentiment_ensemble_v4.png" style="max-width:100%;"><br>
+<h3>confusion_sentiment_pipeline_v3.4</h3><img src="confusion_sentiment_pipeline_v3.4.png" style="max-width:100%;"><br>
+<h3>confusion_sentiment_pipeline_v3.5</h3><img src="confusion_sentiment_pipeline_v3.5.png" style="max-width:100%;"><br>
+<h3>metric_boxplots</h3><img src="metric_boxplots.png" style="max-width:100%;"><br>
+<h3>performance_bars</h3><img src="performance_bars.png" style="max-width:100%;"><br>
+<h3>proba_distributions</h3><img src="proba_distributions.png" style="max-width:100%;"><br>
+<h3>roc_pr_curves</h3><img src="roc_pr_curves.png" style="max-width:100%;"><br>
+</body></html>

@@ -173,9 +173,6 @@ reviewradar_ai/
 └── .env
 Built with 💡 by ReviewRadar AI
 
-vbnet
-Copy
-Edit
 
-Would you like me to overwrite your original `readme.md` with this updated version?
+
 ```

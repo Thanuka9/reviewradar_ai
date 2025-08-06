@@ -1,0 +1,181 @@
+{
+  "metrics": {
+    "cv_accuracy_mean": [
+      {
+        "value": 0.9104589439863042,
+        "step": null,
+        "timestamp": 1754457389.0923612
+      }
+    ],
+    "cv_accuracy_std": [
+      {
+        "value": 0.0003625964600343827,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_precision_mean": [
+      {
+        "value": 0.9231570345857868,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_precision_std": [
+      {
+        "value": 0.00017598132457068044,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_recall_mean": [
+      {
+        "value": 0.9450495218557581,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_recall_std": [
+      {
+        "value": 0.0006242000603478643,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_f1_mean": [
+      {
+        "value": 0.9339748757675063,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_f1_std": [
+      {
+        "value": 0.00028829363628562457,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_roc_auc_mean": [
+      {
+        "value": 0.9685299300742575,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "cv_roc_auc_std": [
+      {
+        "value": 0.0001642222604548957,
+        "step": null,
+        "timestamp": 1754457389.0933597
+      }
+    ],
+    "test_accuracy": [
+      {
+        "value": 0.9108268907995897,
+        "step": null,
+        "timestamp": 1754457400.0308373
+      }
+    ],
+    "test_precision": [
+      {
+        "value": 0.9238283431508558,
+        "step": null,
+        "timestamp": 1754457400.0308373
+      }
+    ],
+    "test_recall": [
+      {
+        "value": 0.9448370841696203,
+        "step": null,
+        "timestamp": 1754457400.0308373
+      }
+    ],
+    "test_f1": [
+      {
+        "value": 0.9342146167572986,
+        "step": null,
+        "timestamp": 1754457400.0308373
+      }
+    ],
+    "test_auc": [
+      {
+        "value": 0.9687145829436532,
+        "step": null,
+        "timestamp": 1754457400.0308373
+      }
+    ]
+  },
+  "metadata": {
+    "config": {
+      "db_user": "review_user",
+      "db_pass": "root",
+      "db_host": "localhost",
+      "db_port": "5432",
+      "db_name": "reviews",
+      "data_query": "SELECT r.text, rf.stars, rf.sentiment, rf.text_length, rf.kw_delivery, rf.kw_service, rf.kw_price, rf.user_avg_3m, rf.user_avg_6m, rf.user_avg_12m FROM review_features rf JOIN reviews r USING(review_id)",
+      "pos_threshold": 4,
+      "spacy_model": "en_core_web_sm",
+      "tfidf": {
+        "max_df": 0.9,
+        "max_features": 20000,
+        "ngram_range": [
+          1,
+          2
+        ],
+        "n_components": 100
+      },
+      "numeric_features": [
+        "sentiment",
+        "text_length",
+        "kw_delivery",
+        "kw_service",
+        "kw_price",
+        "user_avg_3m",
+        "user_avg_6m",
+        "user_avg_12m"
+      ],
+      "model": {
+        "max_iter": 500
+      },
+      "search": {
+        "cv": 3,
+        "n_iter": 100,
+        "sample_size": 2000000,
+        "param_dist": {
+          "clf__estimator__C": {
+            "distribution": "loguniform",
+            "low": 0.001,
+            "high": 1000.0
+          },
+          "clf__estimator__penalty": [
+            "l1",
+            "l2"
+          ],
+          "clf__estimator__solver": [
+            "saga"
+          ],
+          "clf__estimator__class_weight": [
+            null,
+            "balanced"
+          ]
+        },
+        "scoring": "f1"
+      },
+      "chunk_size": 50000,
+      "test_size": 0.2,
+      "jobs": 16,
+      "output_base": "outputs"
+    },
+    "start_time": "2025-08-05T21:33:53.758952",
+    "n_jobs": 16,
+    "n_samples": 6988708,
+    "n_features": 109,
+    "train_size": 5590966,
+    "test_size": 1397742,
+    "train_pos_rate": 0.6701380405461239,
+    "test_pos_rate": 0.6701379796843766,
+    "total_runtime_seconds": 48129.359,
+    "end_time": "2025-08-06T10:56:03.112625"
+  }
+}
